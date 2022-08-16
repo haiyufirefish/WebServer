@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/home/haiyu/WebServer/build",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -pthread -o CMakeFiles/server.dir/main.cpp.o -c /home/haiyu/WebServer/main.cpp",
+  "file": "/home/haiyu/WebServer/main.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/server/webserver.cpp.o -c /home/haiyu/WebServer/code/server/webserver.cpp",
+  "file": "/home/haiyu/WebServer/code/server/webserver.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/server/epoller.cpp.o -c /home/haiyu/WebServer/code/server/epoller.cpp",
+  "file": "/home/haiyu/WebServer/code/server/epoller.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/http/httpconn.cpp.o -c /home/haiyu/WebServer/code/http/httpconn.cpp",
+  "file": "/home/haiyu/WebServer/code/http/httpconn.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/http/httprequest.cpp.o -c /home/haiyu/WebServer/code/http/httprequest.cpp",
+  "file": "/home/haiyu/WebServer/code/http/httprequest.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/http/httpresponse.cpp.o -c /home/haiyu/WebServer/code/http/httpresponse.cpp",
+  "file": "/home/haiyu/WebServer/code/http/httpresponse.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/log/log.cpp.o -c /home/haiyu/WebServer/code/log/log.cpp",
+  "file": "/home/haiyu/WebServer/code/log/log.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/pool/sqlconnpool.cpp.o -c /home/haiyu/WebServer/code/pool/sqlconnpool.cpp",
+  "file": "/home/haiyu/WebServer/code/pool/sqlconnpool.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/buffer/buffer.cpp.o -c /home/haiyu/WebServer/code/buffer/buffer.cpp",
+  "file": "/home/haiyu/WebServer/code/buffer/buffer.cpp"
+},
+{
+  "directory": "/home/haiyu/WebServer/build/code",
+  "command": "/bin/c++   -I/home/haiyu/WebServer/code  -g   -o CMakeFiles/webserver.dir/timer/heaptimer.cpp.o -c /home/haiyu/WebServer/code/timer/heaptimer.cpp",
+  "file": "/home/haiyu/WebServer/code/timer/heaptimer.cpp"
+}
+]

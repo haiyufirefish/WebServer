@@ -210,6 +210,7 @@ bool WebServer::InitSocket_() {
         LOG_ERROR("Port:%d error!",  port_);
         return false;
     }
+    // create socket TCP/IP  ipv4 address
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = htonl(INADDR_ANY);
     addr.sin_port = htons(port_);
@@ -219,13 +220,13 @@ bool WebServer::InitSocket_() {
         optLinger.l_onoff = 1;
         optLinger.l_linger = 1;
     }
-
+    // create socket listener
     listenFd_ = socket(AF_INET, SOCK_STREAM, 0);
     if(listenFd_ < 0) {
         LOG_ERROR("Create socket error!", port_);
         return false;
     }
-
+    // set socket reusable
     ret = setsockopt(listenFd_, SOL_SOCKET, SO_LINGER, &optLinger, sizeof(optLinger));
     if(ret < 0) {
         close(listenFd_);
@@ -242,14 +243,14 @@ bool WebServer::InitSocket_() {
         close(listenFd_);
         return false;
     }
-
+    // bind socket and its address
     ret = bind(listenFd_, (struct sockaddr *)&addr, sizeof(addr));
     if(ret < 0) {
         LOG_ERROR("Bind Port:%d error!", port_);
         close(listenFd_);
         return false;
     }
-
+    // create queue to deal with connnections
     ret = listen(listenFd_, 6);
     if(ret < 0) {
         LOG_ERROR("Listen port:%d error!", port_);

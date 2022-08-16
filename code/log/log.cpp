@@ -35,14 +35,16 @@ void Log::SetLevel(int level) {
     lock_guard<mutex> locker(mtx_);
     level_ = level;
 }
-
+//Asynchronous needs to set the length of the blocking queue, synchronization does not need to set
 void Log::init(int level = 1, const char* path, const char* suffix,
     int maxQueueSize) {
     isOpen_ = true;
     level_ = level;
+    //Set to asynchronous if max_queue_size is set
     if(maxQueueSize > 0) {
         isAsync_ = true;
         if(!deque_) {
+            // here as singleton, using unique_ptr
             unique_ptr<BlockDeque<std::string>> newDeque(new BlockDeque<std::string>);
             deque_ = move(newDeque);
             
@@ -66,6 +68,7 @@ void Log::init(int level = 1, const char* path, const char* suffix,
     toDay_ = t.tm_mday;
 
     {
+        //write into log file
         lock_guard<mutex> locker(mtx_);
         buff_.RetrieveAll();
         if(fp_) { 
